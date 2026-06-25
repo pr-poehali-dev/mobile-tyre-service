@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import { SERVICES } from '@/data/services';
 import {
   Accordion,
   AccordionContent,
@@ -21,20 +23,7 @@ const NAV = [
   ['Контакты', 'contacts'],
 ];
 
-const SERVICES = [
-  { icon: 'Car', title: 'Легковые авто', desc: 'Замена, балансировка, ремонт проколов прямо у вашего дома или офиса' },
-  { icon: 'Truck', title: 'Грузовой транспорт', desc: 'Шиномонтаж фур, автобусов и спецтехники любого тоннажа на месте' },
-  { icon: 'Gauge', title: 'Балансировка', desc: 'Точная компьютерная балансировка с выездным оборудованием' },
-  { icon: 'Wrench', title: 'Ремонт проколов', desc: 'Жгуты, заплатки, грибки — устраним прокол за 15 минут' },
-  { icon: 'Snowflake', title: 'Сезонная замена', desc: 'Переобуем зимой и летом без очередей и ожидания' },
-  { icon: 'CircleAlert', title: 'Аварийный выезд', desc: 'Работаем 24/7 — приедем на трассу или во двор в любое время' },
-  { icon: 'Wind', title: 'Подкачка шин', desc: 'Проверим и выставим давление во всех колёсах на месте' },
-  { icon: 'Settings', title: 'Замена вентилей', desc: 'Быстрая замена ниппелей и вентилей без снятия резины' },
-  { icon: 'Shield', title: 'Диагностика резины', desc: 'Проверим состояние протектора и боковин, дадим рекомендации' },
-  { icon: 'Hammer', title: 'Правка дисков', desc: 'Устраним биение и восьмёрку на литых и стальных дисках' },
-  { icon: 'Package', title: 'Хранение шин', desc: 'Примем, промаркируем и сохраним ваш сезонный комплект' },
-  { icon: 'Star', title: 'VIP-выезд', desc: 'Приоритетный выезд за 10 минут для корпоративных клиентов' },
-];
+
 
 const PRICING = [
   {
@@ -109,6 +98,7 @@ const Heading = ({ kicker, title }: { kicker: string; title: string }) => (
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollTo = (id: string) => {
     setMenuOpen(false);
@@ -213,12 +203,19 @@ const Index = () => {
         <Heading kicker="Что мы делаем" title="Услуги выездного сервиса" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((s) => (
-            <div key={s.title} className="group bg-card border border-border rounded-2xl p-7 hover:border-primary transition-all hover:-translate-y-1">
+            <div
+              key={s.title}
+              onClick={() => navigate(`/services/${s.slug}`)}
+              className="group bg-card border border-border rounded-2xl p-7 hover:border-primary transition-all hover:-translate-y-1 cursor-pointer"
+            >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
                 <Icon name={s.icon} size={28} className="text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="font-display text-2xl font-600 uppercase mb-2">{s.title}</h3>
-              <p className="text-muted-foreground">{s.desc}</p>
+              <p className="text-muted-foreground mb-4">{s.desc}</p>
+              <span className="inline-flex items-center gap-1 text-primary text-sm font-600 group-hover:gap-2 transition-all">
+                Подробнее <Icon name="ArrowRight" size={15} />
+              </span>
             </div>
           ))}
         </div>
