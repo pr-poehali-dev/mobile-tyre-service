@@ -104,7 +104,7 @@ export default {
 				'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
 				'fade-in': 'fade-in 0.6s ease-out forwards',
 				'marquee': 'marquee 30s linear infinite',
-				'spin-slow': 'spin-slow 8s linear infinite'
+				'spin-slow': 'spin-slow 3s linear infinite'
 			}
 		}
 	},
