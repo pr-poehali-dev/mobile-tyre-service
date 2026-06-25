@@ -37,9 +37,11 @@ const ServicePage = () => {
             <span className="font-medium">Назад</span>
           </button>
           <span className="text-border">|</span>
-          <div className="flex items-center gap-2 font-display text-xl font-700 uppercase tracking-wide">
+          <div className="flex items-center gap-2">
             <Icon name="Disc3" className="text-primary animate-spin-slow" size={22} />
-            Pit Stop <span className="text-primary">Moscow</span>
+            <span className="uppercase text-xl" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontStyle: 'italic' }}>
+              Pit Stop <span className="text-primary">Moscow</span>
+            </span>
           </div>
           <div className="ml-auto hidden md:flex items-center gap-3">
             <a href="tel:+78001234567" className="font-display text-lg font-600 hover:text-primary transition-colors">
@@ -200,9 +202,11 @@ const ServicePage = () => {
       {/* Footer */}
       <footer className="border-t border-border px-6 py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
-          <div className="flex items-center gap-2 font-display text-lg font-700 uppercase text-foreground">
+          <div className="flex items-center gap-2">
             <Icon name="Disc3" className="text-primary animate-spin-slow" size={20} />
-            Pit Stop <span className="text-primary">Moscow</span>
+            <span className="uppercase text-lg" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontStyle: 'italic' }}>
+              Pit Stop <span className="text-primary">Moscow</span>
+            </span>
           </div>
           <p>© 2026 Pit Stop Moscow. Выездной шиномонтаж 24/7.</p>
           <button onClick={() => navigate('/')} className="hover:text-primary transition-colors">
