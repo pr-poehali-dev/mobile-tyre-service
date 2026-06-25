@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				display: ['Bebas Neue', 'sans-serif'],
-				sans: ['Raleway', 'sans-serif'],
+				display: ['Oswald', 'sans-serif'],
+				sans: ['Rubik', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
