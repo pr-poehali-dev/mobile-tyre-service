@@ -96,9 +96,9 @@ const PORTFOLIO = [
 ];
 
 const REVIEWS = [
-  { name: 'Андрей М.', car: 'Toyota Camry', text: 'Приехали за 20 минут ночью, поменяли пробитое колесо. Спасли поездку!', rate: 5 },
-  { name: 'ИП Логистика', car: 'Парк из 12 фур', text: 'Обслуживают весь автопарк. Цены честные, работают быстро и аккуратно.', rate: 5 },
-  { name: 'Елена В.', car: 'Kia Rio', text: 'Переобули прямо у подъезда, не пришлось стоять в очередях. Очень удобно!', rate: 5 },
+  { name: 'Андрей М.', car: 'Toyota Camry', text: 'Приехали за 20 минут ночью, поменяли пробитое колесо. Спасли поездку!', rate: 5, photo: 'https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/be743e07-a854-4139-bee5-8c84fe409b87.jpg' },
+  { name: 'ИП Логистика', car: 'Парк из 12 фур', text: 'Обслуживают весь автопарк. Цены честные, работают быстро и аккуратно.', rate: 5, photo: '' },
+  { name: 'Елена В.', car: 'Kia Rio', text: 'Переобули прямо у подъезда, не пришлось стоять в очередях. Очень удобно!', rate: 5, photo: '' },
 ];
 
 const BLOG = [
@@ -346,9 +346,13 @@ const Index = () => {
               </div>
               <p className="text-foreground mb-6 flex-1">«{r.text}»</p>
               <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center font-display font-700 text-primary">
-                  {r.name[0]}
-                </div>
+                {r.photo ? (
+                  <img src={r.photo} alt={r.name} className="w-11 h-11 rounded-full object-cover shrink-0 border-2 border-primary" />
+                ) : (
+                  <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center font-display font-700 text-primary shrink-0">
+                    {r.name[0]}
+                  </div>
+                )}
                 <div>
                   <div className="font-600">{r.name}</div>
                   <div className="text-sm text-muted-foreground">{r.car}</div>
