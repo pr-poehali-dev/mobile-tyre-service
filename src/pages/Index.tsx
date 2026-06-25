@@ -144,8 +144,9 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center">
-            <img src="https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/b444a318-cc7e-4b5b-9859-02e3dfdf2e30.jpg" alt="Pit Stop Moscow" className="h-12 w-auto object-contain" />
+          <div className="flex items-center gap-2 font-display text-xl font-700 uppercase tracking-wide">
+            <Icon name="Disc3" className="text-primary animate-spin-slow" size={26} />
+            Pit Stop <span className="text-primary">Moscow</span>
           </div>
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
             {NAV.map(([label, id]) => (
@@ -428,8 +429,9 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-background border-t border-border px-6 py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
-          <div className="flex items-center">
-            <img src="https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/b444a318-cc7e-4b5b-9859-02e3dfdf2e30.jpg" alt="Pit Stop Moscow" className="h-10 w-auto object-contain" />
+          <div className="flex items-center gap-2 font-display text-lg font-700 uppercase text-foreground">
+            <Icon name="Disc3" className="text-primary animate-spin-slow" size={22} />
+            Pit Stop <span className="text-primary">Moscow</span>
           </div>
           <p>© 2026 Pit Stop Moscow. Выездной шиномонтаж 24/7.</p>
           <div className="flex gap-4">
