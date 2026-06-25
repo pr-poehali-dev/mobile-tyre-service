@@ -144,9 +144,8 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 font-display text-xl font-700 uppercase tracking-wide">
-            <Icon name="Disc3" className="text-primary animate-spin-slow" size={26} />
-            Шин<span className="text-primary">Выезд</span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/b444a318-cc7e-4b5b-9859-02e3dfdf2e30.jpg" alt="Pit Stop Moscow" className="h-12 w-auto object-contain" />
           </div>
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
             {NAV.map(([label, id]) => (
