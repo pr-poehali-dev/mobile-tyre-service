@@ -37,9 +37,8 @@ const ServicePage = () => {
             <span className="font-medium">Назад</span>
           </button>
           <span className="text-border">|</span>
-          <div className="flex items-center gap-2 font-display text-xl font-700 uppercase tracking-wide">
-            <Icon name="Disc3" className="text-primary" size={22} />
-            Шин<span className="text-primary">Выезд</span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/b444a318-cc7e-4b5b-9859-02e3dfdf2e30.jpg" alt="Pit Stop Moscow" className="h-10 w-auto object-contain" />
           </div>
           <div className="ml-auto hidden md:flex items-center gap-3">
             <a href="tel:+78001234567" className="font-display text-lg font-600 hover:text-primary transition-colors">
@@ -200,10 +199,10 @@ const ServicePage = () => {
       {/* Footer */}
       <footer className="border-t border-border px-6 py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
-          <div className="flex items-center gap-2 font-display text-lg font-700 uppercase text-foreground">
-            <Icon name="Disc3" className="text-primary" size={20} /> Шин<span className="text-primary">Выезд</span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/b444a318-cc7e-4b5b-9859-02e3dfdf2e30.jpg" alt="Pit Stop Moscow" className="h-10 w-auto object-contain" />
           </div>
-          <p>© 2026 ШинВыезд. Выездной шиномонтаж 24/7.</p>
+          <p>© 2026 Pit Stop Moscow. Выездной шиномонтаж 24/7.</p>
           <button onClick={() => navigate('/')} className="hover:text-primary transition-colors">
             На главную →
           </button>

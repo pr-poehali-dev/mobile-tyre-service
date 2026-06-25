@@ -409,7 +409,7 @@ const Index = () => {
                 <a href="tel:+78001234567" className="flex items-center gap-3 font-display text-2xl font-700">
                   <Icon name="Phone" size={26} /> 8 800 123-45-67
                 </a>
-                <div className="flex items-center gap-3"><Icon name="Mail" size={22} /> zayavka@shinvyezd.ru</div>
+                <div className="flex items-center gap-3"><Icon name="Mail" size={22} /> info@pitstop.moscow</div>
                 <div className="flex items-center gap-3"><Icon name="Clock" size={22} /> Круглосуточно, без выходных</div>
                 <div className="flex items-center gap-3"><Icon name="MapPin" size={22} /> Выезд по городу и области</div>
               </div>
@@ -428,10 +428,10 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-background border-t border-border px-6 py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
-          <div className="flex items-center gap-2 font-display text-lg font-700 uppercase text-foreground">
-            <Icon name="Disc3" className="text-primary" size={22} /> Шин<span className="text-primary">Выезд</span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/b998f748-dc8d-44b0-b142-24efe796f2fc/bucket/b444a318-cc7e-4b5b-9859-02e3dfdf2e30.jpg" alt="Pit Stop Moscow" className="h-10 w-auto object-contain" />
           </div>
-          <p>© 2026 ШинВыезд. Выездной шиномонтаж 24/7.</p>
+          <p>© 2026 Pit Stop Moscow. Выездной шиномонтаж 24/7.</p>
           <div className="flex gap-4">
             <Icon name="Send" size={20} className="hover:text-primary cursor-pointer transition-colors" />
             <Icon name="MessageCircle" size={20} className="hover:text-primary cursor-pointer transition-colors" />
